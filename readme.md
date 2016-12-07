@@ -8,7 +8,7 @@ _a powerful utility belt well under 1kb gzip, no dependencies_
 ## example
 
 ```javascript
-var x = require('reduce-to)
+var x = require('reduce-to')
 
 // CONVERSIONS
 var source = ['a', 'b', 'c'],
