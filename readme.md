@@ -2,8 +2,8 @@
 
 # reduce-to
 
-_convert and modify Arrays, Objects, Maps, Sets and Strings_
-_a powerful utility belt well under 1kb gzip, no dependencies_
+_convert and modify Arrays, Objects, Maps, Sets and Strings.
+A powerful utility belt well under 1kb gzip, no dependencies_
 
 ## example
 
