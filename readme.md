@@ -27,7 +27,7 @@ var zAC = x(
 )) // 'zAC
 ```
 
-## use cases
+## Features
 
 * apply multiple transforms in a lazy and efficient way
 * convert to any javascript key-value data types
@@ -64,3 +64,7 @@ Most common other reducers can be emulated with these 3 base reducers:
 * `take(N)`: use `count((val, idx) => idx < N)`
 * `drop(N)`: use `count((val, idx) => idx >= N)`
 * ...`reject`, `dropWhile`, ...
+
+## License
+
+[MIT](http://www.opensource.org/licenses/MIT) © [Hugo Villeneuve](https://github.com/hville)
