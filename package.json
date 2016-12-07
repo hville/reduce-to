@@ -1,6 +1,6 @@
 {
   "name": "reduce-to",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "convert and modify Arrays, Objects, Maps, Sets, Strings and iterators",
   "keywords": [
     "transducer", "reducer", "transduce", "reduce", "convert", "key", "value"

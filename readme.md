@@ -61,8 +61,8 @@ To keep things light and simple, only 3 reducer types are provided
 
 `index` is similar to `filter` but with a counter index instead of the key (same as `Array.filter`).
 Most common other reducers can be emulated with these 3 base reducers:
-* `take(N)`: use `count((val, idx) => idx < N)`
-* `drop(N)`: use `count((val, idx) => idx >= N)`
+* `take(N)`: use `index((val, idx) => idx < N)`
+* `drop(N)`: use `index((val, idx) => idx >= N)`
 * ...`reject`, `dropWhile`, ...
 
 ## License

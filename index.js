@@ -83,25 +83,25 @@ function targetReducer(typ) {
 
 function toString(tgt, v) { return tgt + v }
 function toArray(tgt, v) { tgt.push(v); return tgt }
-function toObject(tgt, v, k) { tgt[k] = v; return tgt }
+function toObject(tgt, v, k) { tgt[''+k] = v; return tgt }
 function toMap(tgt, v, k) { return tgt.set(k, v) }
 function toSet(tgt, v) { return tgt.add(v) }
 
 function fromArrayLike(src, xfo, tgt) {
-	for (var i=0; i<src.length; ++i) tgt = xfo(tgt, src[i], i)
+	for (var i=0; i<src.length; ++i) tgt = xfo(tgt, src[i], i, src)
 	return tgt
 }
 function fromObject(src, xfo, tgt) {
-	for (var i=0, ks=Object.keys(src); i<ks.length; ++i) tgt = xfo(tgt, src[ks[i]], ks[i])
+	for (var i=0, ks=Object.keys(src); i<ks.length; ++i) tgt = xfo(tgt, src[ks[i]], ks[i], src)
 	return tgt
 }
 function fromMap(src, xfo, tgt) {
-	src.forEach(function(v, k) { tgt = xfo(tgt, v, '' + k) })
+	src.forEach(function(v, k) { tgt = xfo(tgt, v, k, src) })
 	return tgt
 }
 function fromSet(src, xfo, tgt) {
 	var i = 0
-	src.forEach(function(v) { tgt = xfo(tgt, v, i++) })
+	src.forEach(function(v) { tgt = xfo(tgt, v, i++, src) })
 	return tgt
 }
 
